@@ -1,0 +1,483 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;  
+  }
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: .3s;
+  }
+  .logo img{
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+  }
+  .navlist{
+    display: flex;
+  }
+  .navlist li{
+    position: relative;
+  }
+  .navlist a{
+    font-size: medium;
+    color: black;
+    font-weight: 500;
+    padding: 15px 37px;
+  }
+  .navlist a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgba(66, 59, 48, 0.629);
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+  
+  }
+  .navlist a:hover::after{
+    width: 100%;
+  }
+  section{
+    padding: 100px 18%;
+  }
+  .home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: url(bbbb.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 4rem;
+  
+  }
+  .text-box{
+    color: black;
+    position: absolute;
+    bottom: 20%;
+  }
+  .text-box p{
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 50px;
+  }
+  .text-box h1{
+    font-size: 150px;
+    line-height: 160px;
+    margin-left: 50px;
+    color: transparent;
+    -webkit-text-stroke: 1px #0f0f0f;
+    background: url(ok.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+ 
+  }
+  @keyframes back{
+    100%{
+      background-position: 2000px 0;
+    }
+  }
+  span{
+    color: rgba(110, 113, 116, 0.629);
+    font-weight: 800;
+  }
+
+  .text-box h3{
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 50px;
+  }
+  .home-img{
+    max-width: 70%;
+    width: 440px;
+    height: auto;
+    margin-top: 140px;
+  }
+  .slidershow{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    
+
+  }
+  .middle{
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+  .navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .search-box{
+    float: right;
+    display: flex;
+    margin: 10px 25px;
+  }
+  .tbox{
+    padding: 10px;
+    width: 250px;
+
+  }
+  .btn{
+    width: 50px;
+    background-color: #afa9a9;
+    border-radius: 0;
+  }
+  .bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .bar:hover{
+    background: #fff;
+  }
+  input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+  }
+.slides{
+width: 500%;
+height: 100%;
+display: flex;
+}
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+ 
+  grid-gap: 2rem;
+}
+.about-img img{
+  max-width: 100%;
+  width: 540px;
+  height: auto;
+
+}
+.about-text h2{
+  font-size: var(--h2-font);
+  font-weight: 500;
+  margin: 8px 0px 25px;
+  line-height: 2;
+
+}
+.about-text h3{
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+.about-text p{
+  max-width: 550px;
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  line-height: 38px;
+  margin-bottom: 45px;
+}
+.about .hero h2{
+  color: black;
+  line-height: 1.5;
+  text-align: justify;
+  
+}
+.about .hero h3{
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 850;
+}
+.about .hero p{
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+  
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700');
+
+.cover{
+  display: flex;
+  margin: 10px;
+  margin-left: 0px;
+  height: 400px;
+  width: 900px;
+  
+}
+.box{
+  width: 700px;
+  height: 350px;
+  margin: 10px;
+  margin-left: -120px;
+  box-shadow: -1px 0 10px #0000;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.box img{
+width: 400px;
+height: 400px;
+}
+.box1{
+  width: 700px;
+  height: 350px;
+  margin: 10px;
+}
+.box1 img{
+width: 400px;
+height: 400px;
+}
+.box2{
+  width: 700px;
+  height: 350px;
+  margin: 10px;
+}
+.box2 img{
+width: 400px;
+height: 400px;
+}
+
+.box h2{
+  line-height: 2;
+  font-weight: 600;
+  text-align: center;
+}
+.box1 h2{
+  line-height: 2;
+  font-weight: 600;
+  text-align: center;
+}
+.box2 h2{
+  line-height: 2;
+  font-weight: 600;
+  text-align: center;
+}
+.box p{
+  text-align: justify;
+  line-height: 1.5;
+}
+.box1 p{
+  text-align: justify;
+  line-height: 1.5;
+}
+.box2 p{
+  text-align: justify;
+  line-height: 1.5;
+}
+.service h2{
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  color: #040404;
+  line-height: 2;
+}
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.contact .content{
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2{
+  font-size: 36px;
+  font-weight: 500;
+  color: #040404;
+  line-height: 2.5;
+
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+ .container .contactInfo .boxs{
+position: relative;
+padding: 20px 0;
+display: flex;
+ }
+ .container .contactInfo .boxs .icon{
+  min-width: 60px;
+  height: 60px;
+  background: #938383;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+ }
+ .container .contactInfo .boxs .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #040404;
+  flex-direction: column;
+  font-weight: 300;
+ }
+ .container .contactInfo .boxs .text h3{
+  font-weight: 500;
+  color: #929573;
+ }
+ .contactForm{
+  width: 40%;
+  padding: 40px;
+  background: #958d8d;
+ }
+ .contactForm h2{
+  font-size: 30px;
+  color: rgb(6, 6, 6);
+  font-weight: 700;
+  line-height: 2;
+ }
+ .contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+ }
+ .contactForm .inputBox input,
+ .contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+ }
+ .contactForm .inputBox input[type="submit"]{
+  width: 100px;
+  background: #fbfcfc;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+ }
+ .inputBox input[type="submit"]:hover {
+  background-color: #333;
+  color: #f4e7e7;
+}
+
+
+ .social a{
+  width: 35px;
+  height: 35px;
+  border-radius: 40%;
+  display: inline-flex;
+  align-items: center;
+  background: rbga(128,103,240,1);
+  font-size: 30px;
+  color: rgb(34, 35, 39);
+  margin-right: 22px;
+  margin-bottom: 30px;
+
+}
+.social a:hover{
+  transform: scale(1.3);
+  background: white;
+  transition: .5s;
+}
+
+.footer{
+  background: black;
+  height: auto;
+  width: 100vw;
+  font-family: sans-serif;
+  padding-top: 10px;
+  color: white;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3{
+ font-size: 1.8rem;
+ font-weight: 400;
+ text-transform: capitalize;
+ line-height: 3rem;
+
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.social{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+
+}
+.footer-bottom{
+  
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+
+}
+ 
+
